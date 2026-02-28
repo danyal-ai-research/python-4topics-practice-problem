@@ -1,0 +1,70 @@
+# Write a python program that checks basic student information.
+# Your program should do the following:
+# 1. Take name and age as input from the user.
+# 2. Find and print the highest marks from a given list of marks.
+# 3. Check if the user's grade is valid using a tuple of grades.
+# 4. Look up and print the marks of the student from a dictionary (if the student exists).
+# 5. Print the common students from two sets representing student groups.
+
+
+# Data Setup
+grades = ("A", "B", "C", "D", "F")
+
+student_marks = {
+    "Ali" : 80,
+    "Sara" : 92,
+    "Ahmad" : 60
+}
+marks_list = [80, 92, 60, 55]
+
+group_A = {"Ali", "Sara"}
+group_B = {"Sara", "Ahmad"}
+
+
+# Step 1: User input
+name = input("Enter your name: ")
+age = input("Enter your age: ")
+
+print("Hello ", name, "Your age is: ", age )
+
+# Step 2: Find Highest Marks from the List
+highest = marks_list[0]
+if(marks_list[1] > marks_list[0]):
+    highest = marks_list[1]
+if(marks_list[2] > marks_list[1]):
+    highest = marks_list[2]
+if(marks_list[3] > marks_list[2]):
+    highest = marks_list[3]
+
+print("Highest Marks: ",highest)
+
+# Step 3: Check grade in Tuple
+grade = input("Enter your grade: ")
+if(grade==grade[0]):
+    print("Valid Grade")
+elif(grade==grade[1]):
+    print("Valid Grade")
+elif(grade==grade[2]):
+    print("Valid Grade")
+elif(grade==grade[3]):
+    print("Valid Grade")
+elif(grade==grade[4]):
+    print("Valid Grade")
+else:
+    print("Invalid Grade")
+
+# Step 4: Check marks from Dictionary using name
+if(name=="Ali"):
+    print("Your Marks: ", student_marks["Ali"])
+elif(name=="Sara"):
+    print("Your Marks: ", student_marks["Sara"])
+elif(name=="Ahmad"):
+    print("Your Marks: ", student_marks["Ahmad"])
+else:
+    print("Student Not Found")
+
+# Step 5: Check common in groups using sets
+common_students = group_A.intersection(group_B)
+print("Students in Both groups: ", common_students)
+
+
